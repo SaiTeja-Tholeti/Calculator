@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif, 'Open Sans';
+        background-color: rgb(8, 8, 8);
+    }
+    
+    #container {
+        windows: 1000px;
+        height: 550px;
+        background-image: url(https://i.pinimg.com/736x/97/ce/a7/97cea7e15201dc807d266908c4d911b1.jpg);
+        margin: 20px auto;
+    }
+    
+    #calculator {
+        width: 320px;
+        height: 520px;
+        background-color: whitesmoke;
+        margin: 0 auto;
+        top: 30px;
+        position: relative;
+        border-radius: 5px;
+    }
+    
+    #result {
+        height: 120px;
+    }
+    
+    #keyboard {
+        height: 400px;
+    }
+    
+    #history {
+        text-align: right;
+        height: 20px;
+        margin: 0 20px;
+        padding-top: 20px;
+        font-size: 15px;
+    }
+    
+    #output {
+        text-align: right;
+        height: 60px;
+        margin: 10 20px;
+        font-size: 30px;
+        color: tomato;
+    }
+    
+    .operator,
+    .number,
+    .empty {
+        width: 50px;
+        height: 50px;
+        margin: 15px;
+        float: left;
+        border-radius: 50%;
+        border-width: 0;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .operator:active,
+    .number:active {
+        font-size: 10px;
+    }
+    
+    button:nth-child(3) {
+        font-size: 20px;
+        background-color: rgb(253, 1, 1);
+    }
+    
+    button:nth-child(4) {
+        font-size: 20px;
+        background-color: teal;
+    }
+    
+    button:nth-child(8) {
+        font-size: 20px;
+        background-color: rgb(206, 240, 14);
+    }
+    
+    button:nth-child(12) {
+        font-size: 20px;
+        background-color: rgb(128, 0, 0);
+    }
+    
+    button:nth-child(16) {
+        font-size: 20px;
+        background-color: rgb(4, 248, 248);
+    }
+    
+    button:nth-child(20) {
+        font-size: 20px;
+        background-color: rgb(236, 13, 169);
+    }
+</style>
+
+<body>
+
+    <div id="container">
+        <div id="calculator">
+            <div id="result">
+                <div id="history">
+                    <p id="history-value"></p>
+                </div>
+                <div id="output">
+                    <p id="output-value"></p>
+                </div>
+            </div>
+            <div id="keyboard">
+                <button class="operator" id="clear">C</button>
+                <button class="operator" id="backspace">CE</button>
+                <button class="operator" id="%">%</button>
+                <button class="operator" id="/">&#247</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operator" id="*">*</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operator" id="-">-</button>
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operator" id="+">+</button>
+                <button class="empty" id="empty"></button>
+                <button class="number" id=" ">0</button>
+                <button class="empty" id="empty"></button>
+                <button class="operator" id="=">=</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="Calculator2.js"></script>
+</body>
+
+</html>
